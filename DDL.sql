@@ -66,7 +66,7 @@ CREATE TABLE cita_diagnostico (
     FOREIGN KEY (codigo_cita) REFERENCES citas(codigo),
     FOREIGN KEY (id_diagnostico) REFERENCES diagnosticos(id)
 );
-drop table cita_diagnostico;
+
 CREATE TABLE medicamentos (
 	id INT AUTO_INCREMENT PRIMARY KEY,
     codigo VARCHAR(6) NOT NULL UNIQUE,
@@ -83,8 +83,6 @@ CREATE TABLE cita_medicamento (
     FOREIGN KEY (id_medicamento) REFERENCES medicamentos(id),
 	FOREIGN KEY (id_cita) REFERENCES citas(id)
 );
-drop table cita_medicamento;
-
 
 
 # TABLA DE LOGS
